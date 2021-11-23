@@ -1,0 +1,28 @@
+{
+  "root": "apps/football-pro-e2e",
+  "sourceRoot": "apps/football-pro-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/football-pro-e2e/cypress.json",
+        "devServerTarget": "football-pro:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "football-pro:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/football-pro-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["football-pro"]
+}
