@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "football-pro": "apps/football-pro",
-    "football-pro-e2e": "apps/football-pro-e2e"
+    "football-pro-e2e": "apps/football-pro-e2e",
+    "shared-ui-components": "libs/shared-ui-components",
+    "types": "libs/types"
   }
 }
