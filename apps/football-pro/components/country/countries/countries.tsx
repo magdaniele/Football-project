@@ -16,7 +16,7 @@ export function Countries(props: IndexProps) {
       {
         countries && countries.length > 0 
         ?
-        countries.map(({code, name}) => <li key={code}>{code} - {name}</li>)
+        countries.map(({code, name, flag}) => <li key={code}>{code} - {name} - {flag}</li>)
         :
         <p>no data</p>
       }
