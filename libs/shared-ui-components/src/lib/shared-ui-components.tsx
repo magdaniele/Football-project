@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { SharedUiComponentsProps } from '@football-project/types';
 /* eslint-disable-next-line */
 const StyledSharedUiComponents = styled.div`
-  color: pink;
+  color: Black;
 `;
 
 export function SharedUiComponents(props: SharedUiComponentsProps) {

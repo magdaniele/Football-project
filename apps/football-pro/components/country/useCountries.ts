@@ -1,25 +1,7 @@
 import { useEffect, useState } from "react"
-//import { request, gql, GraphQLClient } from 'graphql-request'
 import axios from 'axios'
 
-/* const query = gql`
-    {
-      Movie(title: "Inception") {
-        releaseDate
-        actors {
-          name
-        }
-      }
-    }
-`*/
-
-const endpoint = 'https://api.graph.cool/simple/v1/cixos23120m0n0173veiiwrjr'
-
-/* const graphQLClient = new GraphQLClient(endpoint, {
-  headers: {
-    authorization: 'Bearer MY_TOKEN',
-  },
-}) */
+const endpoint = 'https://api-football-beta.p.rapidapi.com/countries'
 
 export const useCountries = () => {
     const [countries, setCountries] = useState([]);
@@ -31,7 +13,7 @@ export const useCountries = () => {
         }
       }
       axios.get(endpoint, config).then((response) => {
-        console.log(response.data.response);
+        console.log("entroooooo: ",response.data.response);
         setCountries(response.data.response)
       }).catch((error) => {
         console.log(error);
