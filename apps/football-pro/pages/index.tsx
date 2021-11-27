@@ -1,13 +1,9 @@
-import Link from 'next/link';
-import Img from 'next/image';
 import styled from 'styled-components';
 import { SharedUiComponents } from '@football-project/shared-ui-components';
 import Countries from '../components/country/countries/countries';
 import { IndexProps } from '@football-project/types';
 import axios from 'axios'
-import CountriesSpecs from '../components/countries-specs/countries-specs';
 import { useState } from 'react';
-import Image from 'next/image';
 
 const StyledPage = styled.div`
   .page {
@@ -20,7 +16,7 @@ export async function getStaticProps() {
   const config = {
     headers: {
       'x-rapidapi-host': 'api-football-beta.p.rapidapi.com',
-      'x-rapidapi-key': '6875e55e4emshf30978298cd6d99p1e7596jsn49d25891a38a'
+      'x-rapidapi-key': '544422e956msh41857eaa837a1aap128469jsn881993a8444a'
     }
   }
   const response = await axios.get(endpoint, config);
@@ -48,7 +44,7 @@ export function Index(props: IndexProps) {
     const config = {
       headers: {
         'x-rapidapi-host': 'api-football-beta.p.rapidapi.com',
-        'x-rapidapi-key': '6875e55e4emshf30978298cd6d99p1e7596jsn49d25891a38a'
+        'x-rapidapi-key': '544422e956msh41857eaa837a1aap128469jsn881993a8444a'
       }
     }
       axios.get(`https://api-football-beta.p.rapidapi.com/players?season=2020&team=${id}`, config).then((response) => {

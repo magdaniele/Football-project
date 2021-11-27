@@ -23,7 +23,7 @@ export function Countries(props: IndexProps) {
     const config = {
       headers: {
         'x-rapidapi-host': 'api-football-beta.p.rapidapi.com',
-        'x-rapidapi-key': '6875e55e4emshf30978298cd6d99p1e7596jsn49d25891a38a'
+        'x-rapidapi-key': '544422e956msh41857eaa837a1aap128469jsn881993a8444a'
       }
     }
     axios.get(`https://api-football-beta.p.rapidapi.com/teams?country=${name}`, config).then((response) => {

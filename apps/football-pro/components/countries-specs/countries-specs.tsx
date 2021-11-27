@@ -12,7 +12,7 @@ export async function CountriesSpecsProps() {
     },
     headers: {
       'x-rapidapi-host': 'api-football-beta.p.rapidapi.com',
-      'x-rapidapi-key': '426b79f724msh6ea6d667be82161p125d48jsnb282193ab261'
+      'x-rapidapi-key': '544422e956msh41857eaa837a1aap128469jsn881993a8444a'
     }
   }
   const response = await axios.get(endpoint, config);
