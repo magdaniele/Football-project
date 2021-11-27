@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "football-pro-6ac98"
-  }
+    "default": "football-pro-6ac98",
+    "futpro": "football-pro-6ac98"
+  },
+  "targets": {}
 }
