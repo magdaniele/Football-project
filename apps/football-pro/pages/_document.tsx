@@ -5,6 +5,7 @@ import { ServerStyleSheet } from 'styled-components';
 export default class CustomDocument extends Document<{
   styleTags: ReactElement[];
 }> {
+
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
 

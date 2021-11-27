@@ -9,13 +9,14 @@ export const useCountries = () => {
       const config = {
         headers: {
           'x-rapidapi-host': 'api-football-beta.p.rapidapi.com',
-          'x-rapidapi-key': 'b5aa6648d6msh5bb456c86a7407dp1c70edjsn2618f9fd5c0e'
+          'x-rapidapi-key': '426b79f724msh6ea6d667be82161p125d48jsnb282193ab261'
         }
       }
       axios.get(endpoint, config).then((response) => {
         console.log("entroooooo: ",response.data.response);
         setCountries(response.data.response)
       }).catch((error) => {
+        console.log("el error::")
         console.log(error);
       })
     }, []);
