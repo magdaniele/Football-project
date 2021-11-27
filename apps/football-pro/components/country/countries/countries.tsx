@@ -1,14 +1,19 @@
 import styled from 'styled-components';
 import { useCountries } from '../useCountries';
 import { IndexProps } from '@football-project/types';
-import Link from 'next/link';
 import axios from 'axios';
+
 
 const StyledCountries = styled.div`
   color: Black;
   height: 100vh;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow: scroll;
 `;
+;
 
 export function Countries(props: IndexProps) {
   const [ countriesArray ] = useCountries();
@@ -48,7 +53,7 @@ export function Countries(props: IndexProps) {
         countries && countries.length > 0 
         ?
         
-        countries.map(({code, name, flag},index) => code? <div onClick={()=>handleCountryClick(code, name, flag)} key={`${index}a`} >{code}<br/><br/></div>: "")
+        countries.map(({code, name, flag},index) => code? <div className="Countries" onClick={()=>handleCountryClick(code, name, flag)} key={`${index}a`} >{code}<br/><br/></div>: "")
         :
         <p>no data</p>
       }

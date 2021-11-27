@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Img from 'next/image';
 import styled from 'styled-components';
 import { SharedUiComponents } from '@football-project/shared-ui-components';
 import Countries from '../components/country/countries/countries';
@@ -87,13 +88,12 @@ const pagesOnClickMapper = {
       <header>
       <SharedUiComponents title="Uninorte 2021" showTitle />
       </header>
-      <Link href="/about">About</Link>
       <div className="pages-container">
       <Countries countries={countries} setPage={setPages}/>
       {pages.length>0 && pages.map( ({id, title, url, itemsList, }, index) => (
-        <div key={`${index}a`}>
+        <div className="Conteiner" key={`${index}a`}>
           <h1>{title}</h1>
-          <img src={url} alt=""/>
+          <img src={url} alt={`${url}link`}/>
           <ul>
             {
               itemsList.length>0 && itemsList.map( (item) => (
